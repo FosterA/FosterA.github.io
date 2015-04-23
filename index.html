@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <!-- saved from url=(0043)http://getbootstrap.com/examples/jumbotron/ -->
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -27,6 +28,21 @@
 		#carbonads-container,
 		.carbonad
 		{display:none !important;}
+
+		.clock{
+			border: 2px solid black;
+			border-radius: 10px;
+			background-color: gray;
+			width: 600px;
+			height: auto;
+			margin: 0 auto;
+			font-size: 100px;
+			text-align: center;
+			padding: 40px 2px 40px 2px;
+			color: white;
+			text-decoration: underline;
+
+		}
 	</style>
 	<script type="application/javascript">HTMLFormElement.prototype._submit_IUORWFJKLFWRUSHEOT = HTMLFormElement.prototype.submit;
 		HTMLFormElement.prototype.submit = function () 
@@ -41,9 +57,28 @@
   			this._submit_IUORWFJKLFWRUSHEOT();
  				}
  		};
+
+
+		function startTime() {
+		    var today=new Date();
+		    var h=today.getHours();
+		    var m=today.getMinutes();
+		    var s=today.getSeconds();
+		    m = checkTime(m);
+		    s = checkTime(s);
+		    document.getElementById('clock').innerHTML = h+":"+m+":"+s;
+		    document.getElementById('clock').style.backgroundColor = "#"+h+m+s;
+		    var t = setTimeout(function(){startTime()},500);
+		}
+
+		function checkTime(i) {
+		    if (i<10) {i = "0" + i};  // add zero in front of numbers < 10
+		    return i;
+		}
+
 	</script>
 	</head>
-	<body>
+	<body onload="startTime()">
 
 		<nav class="navbar navbar-inverse navbar-fixed-top">
 		  <div class="container">
@@ -70,7 +105,18 @@
 		  </div>
 		</nav>
 
-		<!-- Main jumbotron for a primary marketing message or call to action -->
+		<div class="jumbotron">
+		  
+			  <div id="clock" class="clock">
+
+			  </div>
+
+		  
+
+		</div>
+
+
+		<!-- Main jumbotron for a primary marketing message or call to action 
 		<div class="jumbotron">
 		  <div class="container">
 			<h1>Welcome To My Personal Site</h1>
@@ -80,12 +126,12 @@
 			<a class="btn btn-social-icon btn-linkedin" href="https://www.linkedin.com/in/alexcfoster/en"><i class="fa fa-linkedin"></i></a>
 
 		  </div>
-		</div>
+		</div> -->
 		  <hr>
 		  <footer>
 			<p>© Alex C Foster 2015</p>
 		  </footer>
-		</div> <!-- /container -->
+		</div>  <!-- /container -->
 
 
     <!-- Bootstrap core JavaScript
