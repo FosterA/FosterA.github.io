@@ -34,12 +34,12 @@
 			border: 2px solid black;
 			border-radius: 10px;
 			background-color: gray;
-			width: 600px;
+			width: 375px;
 			height: auto;
-			margin: 0 auto;
-			font-size: 100px;
+			margin-left: 40px;
+			font-size: 80px;
 			text-align: center;
-			padding: 40px 2px 40px 2px;
+			padding: 10px 5px 10px 5px;
 			color: white;
 			
 			font-family: 'Nova Square', cursive;
@@ -47,7 +47,9 @@
 		}
 		.wrapper{
 			width: 80%;
-			margin: 0 auto;
+			padding: 40px;
+			margin-top: 20%;
+			color: black;
 		}
 	</style>
 	<script type="application/javascript">HTMLFormElement.prototype._submit_IUORWFJKLFWRUSHEOT = HTMLFormElement.prototype.submit;
@@ -70,10 +72,11 @@
 		    var h=today.getHours();
 		    var m=today.getMinutes();
 		    var s=today.getSeconds();
+		    var hex= (h+m+s);
 		    m = checkTime(m);
 		    s = checkTime(s);
 		    document.getElementById('clock').innerHTML = h+":"+m+":"+s;
-		    document.getElementById('clock').style.backgroundColor = "#"+h+m+s;
+		    document.getElementById('clock').style.backgroundColor = "#"+hex;
 		    var t = setTimeout(function(){startTime()},500);
 		}
 
@@ -84,8 +87,8 @@
 
 	</script>
 	</head>
+	<!--Run JS onload of page -->
 	<body onload="startTime()">
-
 		<nav class="navbar navbar-inverse navbar-fixed-top">
 		  <div class="container">
 			<div class="navbar-header">
@@ -111,35 +114,17 @@
 		  </div>
 		</nav>
 
-
 		<!-- Main jumbotron for a primary marketing message or call to action -->
 		<div class="jumbotron">
-		  <div class="wrapper">
-
-			  <div id="clock" class="clock"></div>
-
-			  
+			<div id="clock" class="clock"></div>	
+			<div class="wrapper">
 			  <h1>Welcome To My Personal Site</h1>
 			<p>I'm hosted with GitHub Pages and am still under construction. Soon you will see a glimpse of my projects, intersts and ideas! Stay Tuned! </p>
 			<a class="btn btn-social-icon btn-github" href="https://github.com/FosterA"><i class="fa fa-github"></i></a>
 			<a class="btn btn-social-icon btn-twitter" href="https://twitter.com/FosterThePrson"><i class="fa fa-twitter"></i></a>
 			<a class="btn btn-social-icon btn-linkedin" href="https://www.linkedin.com/in/alexcfoster/en"><i class="fa fa-linkedin"></i></a>
-		  
 			</div>
 		</div>
-
-
-		<!-- Main jumbotron for a primary marketing message or call to action 
-		<div class="jumbotron">
-		  <div class="container">
-			<h1>Welcome To My Personal Site</h1>
-			<p>I'm hosted with GitHub Pages and am still under construction. Soon you will see a glimpse of my projects, intersts and ideas! Stay Tuned! </p>
-			<a class="btn btn-social-icon btn-github" href="https://github.com/FosterA"><i class="fa fa-github"></i></a>
-			<a class="btn btn-social-icon btn-twitter" href="https://twitter.com/FosterThePrson"><i class="fa fa-twitter"></i></a>
-			<a class="btn btn-social-icon btn-linkedin" href="https://www.linkedin.com/in/alexcfoster/en"><i class="fa fa-linkedin"></i></a>
-
-		  </div>
-		</div> -->
 		  <hr>
 		  <footer>
 			<p>© Alex C Foster 2015</p>
