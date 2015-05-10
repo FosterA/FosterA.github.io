@@ -72,7 +72,7 @@
 		    var h=today.getHours();
 		    var m=today.getMinutes();
 		    var s=today.getSeconds();
-		    var hex= (h+m+s);
+		    var hex= 5*(h+m+s);
 		    m = checkTime(m);
 		    s = checkTime(s);
 		    document.getElementById('clock').innerHTML = h+":"+m+":"+s;
