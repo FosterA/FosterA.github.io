@@ -9,7 +9,7 @@
     <meta name="author" content="">
     <link rel="shortcut icon" href='../../pictures/glyphicons-79-warning-sign.png'>
 
-    <title>AlexFoster.me</title>
+    <title>{Foster}</title>
 
     <!-- Bootstrap core CSS -->
     <link href="bootstrap-3.3.2-dist/css/bootstrap.css" rel="stylesheet">
@@ -21,7 +21,15 @@
     <link href="bootstrap-3.3.2-dist/css/font-awesome.css" rel="stylesheet">
     <!--Google Font API-->
     <link href='http://fonts.googleapis.com/css?family=Source+Code+Pro:500,900' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Nova+Square' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Mono:400,500' rel='stylesheet' type='text/css'>
+
+ 	<!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="./Jumbotron Template for Bootstrap_files/jquery.min.js"></script>
+    <script src="./Jumbotron Template for Bootstrap_files/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="./Jumbotron Template for Bootstrap_files/ie10-viewport-bug-workaround.js"></script>
 
 	<style>
 		#content > #right > .dose > .dosesingle,
@@ -34,7 +42,7 @@
 			border: 2px solid black;
 			border-radius: 10px;
 			background-color: gray;
-			width: 375px;
+			width: 400px;
 			height: auto;
 			margin-left: 40px;
 			font-size: 80px;
@@ -42,7 +50,7 @@
 			padding: 10px 5px 10px 5px;
 			color: white;
 			
-			font-family: 'Nova Square', cursive;
+			font-family: 'Roboto Mono';
 
 		}
 		.wrapper{
@@ -72,7 +80,7 @@
 		    var h=today.getHours();
 		    var m=today.getMinutes();
 		    var s=today.getSeconds();
-		    var hex= 5*(h+m+s);
+		    var hex= h+m+(1.5*s);
 		    m = checkTime(m);
 		    s = checkTime(s);
 		    document.getElementById('clock').innerHTML = h+":"+m+":"+s;
@@ -98,7 +106,7 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			  </button>
-			  <a class="navbar-brand" href="">AlexFoster.me</a>
+			  <a class="navbar-brand" href="">{Foster}</a>
 			</div>
 			<div id="navbar" class="navbar-collapse collapse">
 			  <form class="navbar-form navbar-right" autocomplete="off">
@@ -132,13 +140,7 @@
 		</div>  <!-- /container -->
 
 
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="./Jumbotron Template for Bootstrap_files/jquery.min.js"></script>
-    <script src="./Jumbotron Template for Bootstrap_files/bootstrap.min.js"></script>
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="./Jumbotron Template for Bootstrap_files/ie10-viewport-bug-workaround.js"></script>
+   
   
 
 	</body>
